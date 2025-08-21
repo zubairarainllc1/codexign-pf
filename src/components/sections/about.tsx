@@ -50,7 +50,7 @@ export function AboutSection() {
               </div>
               <h3 className="font-headline text-2xl font-semibold text-foreground text-center">Who I Am</h3>
               <p className="text-center">
-                I’m Zubair Arain (Codexign), a full-stack developer specializing in creating seamless, end-to-end digital solutions. From dynamic websites and robust APIs to intuitive mobile apps and innovative AI-powered features, I am passionate about building technology that not only functions flawlessly but also provides a delightful user experience.
+                I'm a creative professional from Hyderabad, Pakistan, offering full-stack development, graphic design, and custom AI solutions. Passionate about clean design, intuitive interfaces, and powerful web experiences.  With years of experience in the digital space, I've helped numerous clients transform their ideas into reality through thoughtful design and robust development.
               </p>
               <p className="text-center">
                 My approach is rooted in writing clean, scalable code and a commitment to engineering excellence. I thrive on solving complex problems and turning ambitious ideas into reality, ensuring every project is delivered to the highest standard.
