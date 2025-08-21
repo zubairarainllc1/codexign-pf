@@ -14,7 +14,7 @@ const skills = [
 
 const stats = [
   { icon: Briefcase, value: "5+", label: "Years Experience" },
-  { icon: CheckCircle, value: "50+", label: "Projects Shipped" },
+  { icon: CheckCircle, value: "100+", label: "Projects Shipped" },
   { icon: Users, value: "100+", label: "Happy Clients" },
   { icon: Clock, value: "24-Hour", label: "Response Time" },
 ];
@@ -38,7 +38,7 @@ export function AboutSection() {
                <div className="flex justify-center">
                 <div className="relative h-64 w-64 lg:h-80 lg:w-80">
                 <Image
-                    src="https://i.ibb.co/TBnv0W1P/profile.png"
+                    src="https://i.ibb.co/TBnv0W1/profile.png"
                     alt="Zubair Arain"
                     width={400}
                     height={400}
