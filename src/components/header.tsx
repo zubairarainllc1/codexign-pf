@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
@@ -22,6 +22,8 @@ const NAV_ITEMS = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const lastScrollY = useRef(0);
   
   const activeSection = useScrollSpy(NAV_ITEMS.map(item => item.id), {
     rootMargin: "-50% 0px -50% 0px",
@@ -29,10 +31,22 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 10);
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+        // Scrolling down
+        setIsHidden(true);
+      } else {
+        // Scrolling up
+        setIsHidden(false);
+      }
+      lastScrollY.current = currentScrollY;
     };
+    
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -60,7 +74,8 @@ export function Header() {
     <header
       className={cn(
         "sticky top-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-background/80 shadow-md backdrop-blur-sm" : "bg-transparent"
+        isScrolled ? "bg-background/80 shadow-md backdrop-blur-sm" : "bg-transparent",
+        isHidden ? "-translate-y-full" : "translate-y-0"
       )}
     >
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -68,8 +83,8 @@ export function Header() {
           <Image 
             src="https://i.ibb.co/XfGPJvYj/Codexign.png" 
             alt="Codexign Logo" 
-            width={120} 
-            height={30}
+            width={100} 
+            height={25}
             priority
           />
         </Link>
