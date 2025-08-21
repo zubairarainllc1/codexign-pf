@@ -25,7 +25,7 @@ const socialLinks = [
   { name: 'Twitter', icon: Twitter, url: '#' },
 ];
 
-const directEmail = "zubair.arain@example.com";
+const directEmail = "codexignllc@gmail.com";
 
 export function ContactSection() {
   const { toast } = useToast();
