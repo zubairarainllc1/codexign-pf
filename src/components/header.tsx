@@ -62,7 +62,7 @@ export function Header() {
         isScrolled ? "bg-background/80 shadow-md backdrop-blur-sm" : "bg-transparent"
       )}
     >
-      <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="#home" className="flex items-center">
           <Image 
             src="https://i.ibb.co/XfGPJvYj/Codexign.png" 
