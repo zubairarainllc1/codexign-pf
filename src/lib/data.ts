@@ -14,12 +14,12 @@ export type Project = {
 export const projectsData: Project[] = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'A feature-rich online store with a modern, responsive design.',
-    fullDescription: 'Developed a complete e-commerce solution from the ground up, featuring product catalogs, a secure checkout process with Stripe integration, user accounts, and an admin dashboard for managing products, orders, and customers. Built with a Node.js backend and a React frontend.',
+    title: 'Invoice Generator',
+    description: 'A web app to create and manage invoices with ease.',
+    fullDescription: 'Developed a comprehensive invoice generator that allows users to create, send, and track professional invoices. Features include customizable templates, client management, payment tracking, and PDF exporting. Built with modern web technologies for a seamless user experience.',
     image: '/invoice.png',
-    imageHint: 'e-commerce website',
-    tags: ['Web', 'React', 'Node.js', 'Express', 'MySQL', 'Stripe'],
+    imageHint: 'invoice generator',
+    tags: ['Web', 'React', 'Node.js', 'PDF Generation', 'Stripe'],
     liveUrl: '#',
     codeUrl: '#',
     category: 'Web',
