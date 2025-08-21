@@ -10,6 +10,7 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import { cn } from '@/lib/utils';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useScrollSpy } from '@/lib/hooks/use-scroll-spy';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const NAV_ITEMS = [
   { id: 'home', label: 'Home' },
@@ -24,22 +25,27 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const lastScrollY = useRef(0);
+  const isMobile = useIsMobile();
   
   const activeSection = useScrollSpy(NAV_ITEMS.map(item => item.id), {
     rootMargin: "-50% 0px -50% 0px",
   });
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsScrolled(currentScrollY > 10);
 
-      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
-        // Scrolling down
-        setIsHidden(true);
+      if (isMobile) {
+        if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+          setIsHidden(true); // Scroll down
+        } else {
+          setIsHidden(false); // Scroll up
+        }
       } else {
-        // Scrolling up
-        setIsHidden(false);
+        setIsHidden(false); // Always visible on desktop
       }
       lastScrollY.current = currentScrollY;
     };
@@ -48,7 +54,7 @@ export function Header() {
     handleScroll();
     
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isMobile]);
 
   const NavLink = ({ id, label, isMobile = false }: { id: string; label: string; isMobile?: boolean; }) => (
     <Link
