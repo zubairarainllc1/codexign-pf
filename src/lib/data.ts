@@ -29,7 +29,7 @@ export const projectsData: Project[] = [
     title: 'Fitness Tracker App',
     description: 'A cross-platform mobile app to track workouts and progress.',
     fullDescription: 'A mobile application built with Flutter for both iOS and Android. It allows users to log their workouts, track progress over time with charts and statistics, set goals, and follow pre-made workout plans. Includes local data persistence using SQLite.',
-    image: 'https://placehold.co/600x400.png',
+    image: '/web.png',
     imageHint: 'mobile app fitness',
     tags: ['Mobile', 'Flutter', 'Dart', 'SQLite'],
     liveUrl: '#',
