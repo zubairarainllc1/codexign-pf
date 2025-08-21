@@ -38,7 +38,7 @@ export function AboutSection() {
                <div className="flex justify-center">
                 <div className="relative h-64 w-64 lg:h-80 lg:w-80">
                 <Image
-                    src="https://i.ibb.co/TBnv0W1/profile.png"
+                    src="/profile.png"
                     alt="Zubair Arain"
                     width={400}
                     height={400}
