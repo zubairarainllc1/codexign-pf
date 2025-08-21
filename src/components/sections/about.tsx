@@ -1,3 +1,4 @@
+
 import { Download, CheckCircle, Briefcase, Users, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -31,17 +32,34 @@ export function AboutSection() {
           </p>
         </AnimatedSection>
 
-        <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
-          <AnimatedSection className="lg:col-span-2">
-            <div className="space-y-6 text-base text-muted-foreground">
-              <h3 className="font-headline text-2xl font-semibold text-foreground">Who I Am</h3>
-              <p>
+        <div className="mt-16 flex justify-center">
+            <AnimatedSection delay={200}>
+                <div className="relative h-64 w-64 lg:h-80 lg:w-80">
+                <Image
+                    src="https://placehold.co/400x400.png"
+                    alt="Zubair Arain"
+                    width={400}
+                    height={400}
+                    className="rounded-full object-cover shadow-lg"
+                    data-ai-hint="portrait man"
+                />
+                <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-primary/20 backdrop-blur-sm"></div>
+                <div className="absolute -top-4 -left-4 h-20 w-20 rounded-lg bg-accent/20 backdrop-blur-sm"></div>
+                </div>
+            </AnimatedSection>
+        </div>
+
+        <div className="mt-16">
+          <AnimatedSection>
+            <div className="space-y-6 text-base text-muted-foreground max-w-3xl mx-auto">
+              <h3 className="font-headline text-2xl font-semibold text-foreground text-center">Who I Am</h3>
+              <p className="text-center">
                 I’m Zubair Arain (Codexign), a full-stack developer specializing in creating seamless, end-to-end digital solutions. From dynamic websites and robust APIs to intuitive mobile apps and innovative AI-powered features, I am passionate about building technology that not only functions flawlessly but also provides a delightful user experience.
               </p>
-              <p>
+              <p className="text-center">
                 My approach is rooted in writing clean, scalable code and a commitment to engineering excellence. I thrive on solving complex problems and turning ambitious ideas into reality, ensuring every project is delivered to the highest standard.
               </p>
-              <div className="flex justify-start">
+              <div className="flex justify-center">
                  {/* Add a comment for the user to replace '#' with the actual CV file path */}
                 <Button asChild size="lg">
                   <a href="/zubair-arain-cv.pdf" download>
@@ -50,21 +68,6 @@ export function AboutSection() {
                   </a>
                 </Button>
               </div>
-            </div>
-          </AnimatedSection>
-          
-          <AnimatedSection delay={200} className="flex justify-center">
-            <div className="relative h-64 w-64 lg:h-80 lg:w-80">
-              <Image
-                src="https://placehold.co/400x400.png"
-                alt="Zubair Arain"
-                width={400}
-                height={400}
-                className="rounded-full object-cover shadow-lg"
-                data-ai-hint="portrait man"
-              />
-               <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-primary/20 backdrop-blur-sm"></div>
-               <div className="absolute -top-4 -left-4 h-20 w-20 rounded-lg bg-accent/20 backdrop-blur-sm"></div>
             </div>
           </AnimatedSection>
         </div>
