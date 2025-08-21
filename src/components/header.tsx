@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -67,8 +68,8 @@ export function Header() {
           <Image 
             src="https://i.ibb.co/XfGPJvYj/Codexign.png" 
             alt="Codexign Logo" 
-            width={140} 
-            height={35}
+            width={120} 
+            height={30}
             priority
           />
         </Link>
@@ -93,8 +94,8 @@ export function Header() {
                      <Image 
                         src="https://i.ibb.co/XfGPJvYj/Codexign.png" 
                         alt="Codexign Logo" 
-                        width={140} 
-                        height={35}
+                        width={120} 
+                        height={30}
                         priority
                       />
                   </Link>
