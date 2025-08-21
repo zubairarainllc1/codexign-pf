@@ -17,7 +17,7 @@ export const projectsData: Project[] = [
     title: 'E-Commerce Platform',
     description: 'A feature-rich online store with a modern, responsive design.',
     fullDescription: 'Developed a complete e-commerce solution from the ground up, featuring product catalogs, a secure checkout process with Stripe integration, user accounts, and an admin dashboard for managing products, orders, and customers. Built with a Node.js backend and a React frontend.',
-    image: 'https://placehold.co/600x400.png',
+    image: '/invoice.png',
     imageHint: 'e-commerce website',
     tags: ['Web', 'React', 'Node.js', 'Express', 'MySQL', 'Stripe'],
     liveUrl: '#',
