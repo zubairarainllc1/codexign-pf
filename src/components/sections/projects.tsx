@@ -10,15 +10,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { projectsData } from '@/lib/data';
 import { AnimatedSection } from '../animated-section';
 
-const filters = ['All', 'Web', 'Mobile', 'AI'];
-
 export function ProjectsSection() {
-  const [activeFilter, setActiveFilter] = useState('All');
-
-  const filteredProjects = activeFilter === 'All'
-    ? projectsData
-    : projectsData.filter(p => p.category === activeFilter);
-
   return (
     <section id="projects" className="py-24 sm:py-32 bg-secondary/50">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -30,24 +22,9 @@ export function ProjectsSection() {
             A selection of projects that I'm proud of.
           </p>
         </AnimatedSection>
-
-        <AnimatedSection delay={150}>
-          <div className="mt-10 flex justify-center gap-2">
-            {filters.map(filter => (
-              <Button
-                key={filter}
-                variant={activeFilter === filter ? 'default' : 'outline'}
-                onClick={() => setActiveFilter(filter)}
-                className="rounded-full"
-              >
-                {filter}
-              </Button>
-            ))}
-          </div>
-        </AnimatedSection>
         
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {filteredProjects.map((project, index) => (
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
+          {projectsData.slice(0, 2).map((project, index) => (
             <AnimatedSection key={project.id} delay={index * 100}>
                <Dialog>
                 <DialogTrigger asChild>
