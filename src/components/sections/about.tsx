@@ -68,23 +68,19 @@ export function AboutSection() {
           </AnimatedSection>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat, index) => (
-            <AnimatedSection key={stat.label} delay={index * 100}>
-              <Card className="text-center">
-                <CardHeader>
-                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <stat.icon className="h-6 w-6" />
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-3xl font-bold text-foreground">{stat.value}</p>
+        <AnimatedSection className="mt-20" delay={200}>
+          <div className="rounded-lg border bg-card shadow-sm">
+            <div className="grid grid-cols-2 divide-y divide-border rounded-lg md:grid-cols-4 md:divide-x md:divide-y-0">
+              {stats.map((stat, index) => (
+                <div key={stat.label} className="p-6 text-center">
+                  <stat.icon className="mx-auto h-8 w-8 text-primary" />
+                  <p className="mt-3 text-3xl font-bold text-foreground">{stat.value}</p>
                   <p className="mt-1 text-sm text-muted-foreground">{stat.label}</p>
-                </CardContent>
-              </Card>
-            </AnimatedSection>
-          ))}
-        </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
 
         <AnimatedSection delay={200} className="mt-20">
             <h3 className="text-center font-headline text-2xl font-semibold text-foreground">My Skillset</h3>
