@@ -15,7 +15,7 @@ const skills = [
 const stats = [
   { icon: Briefcase, value: "5+", label: "Years Experience" },
   { icon: CheckCircle, value: "50+", label: "Projects Shipped" },
-  { icon: Users, value: "30+", label: "Happy Clients" },
+  { icon: Users, value: "100+", label: "Happy Clients" },
   { icon: Clock, value: "24-Hour", label: "Response Time" },
 ];
 
@@ -31,9 +31,11 @@ export function AboutSection() {
             A little bit about my journey and expertise.
           </p>
         </AnimatedSection>
-
-        <div className="mt-16 flex justify-center">
-            <AnimatedSection delay={200}>
+        
+        <div className="mt-16">
+          <AnimatedSection>
+            <div className="space-y-6 text-base text-muted-foreground max-w-3xl mx-auto">
+               <div className="flex justify-center">
                 <div className="relative h-64 w-64 lg:h-80 lg:w-80">
                 <Image
                     src="https://i.ibb.co/TBnv0W1P/profile.png"
@@ -45,12 +47,7 @@ export function AboutSection() {
                 <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-primary/20 backdrop-blur-sm"></div>
                 <div className="absolute -top-4 -left-4 h-20 w-20 rounded-lg bg-accent/20 backdrop-blur-sm"></div>
                 </div>
-            </AnimatedSection>
-        </div>
-
-        <div className="mt-16">
-          <AnimatedSection>
-            <div className="space-y-6 text-base text-muted-foreground max-w-3xl mx-auto">
+              </div>
               <h3 className="font-headline text-2xl font-semibold text-foreground text-center">Who I Am</h3>
               <p className="text-center">
                 I’m Zubair Arain (Codexign), a full-stack developer specializing in creating seamless, end-to-end digital solutions. From dynamic websites and robust APIs to intuitive mobile apps and innovative AI-powered features, I am passionate about building technology that not only functions flawlessly but also provides a delightful user experience.
