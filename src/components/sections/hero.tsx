@@ -53,6 +53,12 @@ export function HeroSection() {
         
         <AnimatedSection delay={300}>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Button size="lg" asChild>
+              <Link href="#projects">
+                <ArrowDown className="mr-2 h-5 w-5" />
+                View Projects
+              </Link>
+            </Button>
             <Button size="lg" variant="outline" asChild>
               <Link href="#contact">
                 <MessageCircle className="mr-2 h-5 w-5" />
