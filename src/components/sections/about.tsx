@@ -36,12 +36,11 @@ export function AboutSection() {
             <AnimatedSection delay={200}>
                 <div className="relative h-64 w-64 lg:h-80 lg:w-80">
                 <Image
-                    src="https://placehold.co/400x400.png"
+                    src="https://i.ibb.co/TBnv0W1P/profile.png"
                     alt="Zubair Arain"
                     width={400}
                     height={400}
                     className="rounded-full object-cover shadow-lg"
-                    data-ai-hint="portrait man"
                 />
                 <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full bg-primary/20 backdrop-blur-sm"></div>
                 <div className="absolute -top-4 -left-4 h-20 w-20 rounded-lg bg-accent/20 backdrop-blur-sm"></div>
