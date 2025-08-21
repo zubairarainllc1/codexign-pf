@@ -25,7 +25,7 @@ export function ProjectsSection() {
         </AnimatedSection>
         
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
-          {projectsData.slice(0, 2).map((project, index) => (
+          {projectsData.slice(0, 4).map((project, index) => (
             <AnimatedSection key={project.id} delay={index * 100}>
               <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                 <Card className="group h-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
