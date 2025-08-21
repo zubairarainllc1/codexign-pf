@@ -68,20 +68,20 @@ export function ContactSection() {
         <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-3">
           <AnimatedSection className="lg:col-span-1">
              <Card>
-              <CardHeader className="text-center">
+              <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
                 <CardDescription>
                   Find me on social media or send a direct email.
                 </CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col items-center space-y-4">
+              <CardContent className="space-y-4">
                 <Button onClick={copyEmail} className="w-full justify-start gap-3" variant="outline">
                   <Mail className="h-5 w-5" />
                   <span className="truncate">{directEmail}</span>
                   <Copy className="ml-auto h-4 w-4 text-muted-foreground" />
                 </Button>
 
-                <div className="flex justify-center space-x-2">
+                <div className="flex space-x-2">
                   {socialLinks.map((social) => (
                     <Button key={social.name} variant="outline" size="icon" asChild>
                        {/* Add comment for user to replace '#' with actual social links */}
