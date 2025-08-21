@@ -32,7 +32,7 @@ export const projectsData: Project[] = [
     image: '/web.jpg',
     imageHint: 'productivity tools dashboard',
     tags: ['Web', 'React', 'Node.js', 'AI'],
-    liveUrl: 'https://google.com/',
+    liveUrl: 'https://toolbox-ten-delta.vercel.app/',
     codeUrl: '#',
     category: 'Web',
   },
