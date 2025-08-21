@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 import './globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 
@@ -51,10 +50,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0B1220" },
-  ],
+  themeColor: "#ffffff",
 };
 
 
@@ -64,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         <script
           type="application/ld+json"
@@ -83,15 +79,8 @@ export default function RootLayout({
         />
       </head>
       <body className={cn("font-body antialiased", fontBody.variable, fontHeadline.variable)}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-          <Toaster />
-        </ThemeProvider>
+        {children}
+        <Toaster />
       </body>
     </html>
   );
