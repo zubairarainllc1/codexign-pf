@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from 'react';
@@ -13,12 +14,6 @@ export function HeroSection() {
   const [tagline, setTagline] = useState(
     'Full-Stack Engineer • AI Integrator • Building web, mobile & software that scale'
   );
-  const [isGeneratorOpen, setIsGeneratorOpen] = useState(false);
-
-  const handleTaglineSelect = (newTagline: string) => {
-    setTagline(newTagline);
-    setIsGeneratorOpen(false);
-  };
 
   return (
     <section id="home" className="relative flex min-h-[calc(100vh-5rem)] w-full items-center justify-center overflow-hidden">
@@ -53,17 +48,6 @@ export function HeroSection() {
             <p className="text-lg text-muted-foreground sm:text-xl">
               {tagline}
             </p>
-            <Dialog open={isGeneratorOpen} onOpenChange={setIsGeneratorOpen}>
-              <DialogTrigger asChild>
-                <Button variant="ghost" size="icon" className="h-8 w-8 shrink-0 opacity-50 transition-opacity group-hover:opacity-100">
-                  <Sparkles className="h-5 w-5 text-primary" />
-                  <span className="sr-only">Generate AI Tagline</span>
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-xl">
-                <AITaglineGenerator onTaglineSelect={handleTaglineSelect} />
-              </DialogContent>
-            </Dialog>
           </div>
         </AnimatedSection>
         
