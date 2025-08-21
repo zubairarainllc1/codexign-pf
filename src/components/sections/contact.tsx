@@ -68,13 +68,13 @@ export function ContactSection() {
         <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-3">
           <AnimatedSection className="lg:col-span-1">
              <Card>
-              <CardHeader>
+              <CardHeader className="text-center">
                 <CardTitle>Contact Information</CardTitle>
                 <CardDescription>
                   Find me on social media or send a direct email.
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="flex flex-col items-center space-y-4">
                 <Button onClick={copyEmail} className="w-full justify-start gap-3" variant="outline">
                   <Mail className="h-5 w-5" />
                   <span className="truncate">{directEmail}</span>
