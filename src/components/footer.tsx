@@ -6,8 +6,6 @@ import Image from 'next/image';
 import { Button } from './ui/button';
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-
   const socialLinks = [
     { name: 'GitHub', icon: Github, url: '#' },
     { name: 'LinkedIn', icon: Linkedin, url: '#' },
@@ -43,7 +41,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
-          © {currentYear} Zubair Arain. All Rights Reserved.
+          © 2025 Codexign
         </div>
       </div>
     </footer>
