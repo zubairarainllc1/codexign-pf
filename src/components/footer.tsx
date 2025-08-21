@@ -1,7 +1,8 @@
 "use client";
 
-import { Github, Linkedin, Twitter, Code2 } from 'lucide-react';
+import { Github, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from './ui/button';
 
 export function Footer() {
@@ -18,8 +19,14 @@ export function Footer() {
       <div className="container mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="flex items-center gap-2">
-            <Code2 className="h-6 w-6 text-primary" />
-            <span className="font-headline text-xl font-bold">Codexign</span>
+            <Link href="#home" className="flex items-center">
+              <Image 
+                src="https://i.ibb.co/XfGPJvYj/Codexign.png" 
+                alt="Codexign Logo" 
+                width={120} 
+                height={30}
+              />
+            </Link>
           </div>
           <p className="text-center text-sm text-muted-foreground md:text-left">
             Crafting digital experiences, one line of code at a time.

@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Code2 } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { cn } from '@/lib/utils';
@@ -62,9 +63,14 @@ export function Header() {
       )}
     >
       <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="#home" className="flex items-center gap-2">
-          <Code2 className="h-7 w-7 text-primary" />
-          <span className="font-headline text-2xl font-bold">Codexign</span>
+        <Link href="#home" className="flex items-center">
+          <Image 
+            src="https://i.ibb.co/XfGPJvYj/Codexign.png" 
+            alt="Codexign Logo" 
+            width={140} 
+            height={35}
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -83,9 +89,14 @@ export function Header() {
             <SheetContent side="right" className="w-full bg-background/95 backdrop-blur-sm sm:max-w-xs">
               <div className="flex h-full flex-col">
                 <div className="mb-8 flex items-center justify-between">
-                  <Link href="#home" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Code2 className="h-7 w-7 text-primary" />
-                    <span className="font-headline text-2xl font-bold">Codexign</span>
+                  <Link href="#home" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
+                     <Image 
+                        src="https://i.ibb.co/XfGPJvYj/Codexign.png" 
+                        alt="Codexign Logo" 
+                        width={140} 
+                        height={35}
+                        priority
+                      />
                   </Link>
                    <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                       <X className="h-6 w-6" />
