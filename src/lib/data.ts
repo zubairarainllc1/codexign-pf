@@ -44,7 +44,7 @@ export const projectsData: Project[] = [
     image: '/tool.jpg',
     imageHint: 'document generator interface',
     tags: ['Web', 'React', 'Node.js', 'PDF Generation'],
-    liveUrl: '#',
+    liveUrl: 'https://easygen-zeta.vercel.app/',
     codeUrl: '#',
     category: 'Web',
   },
